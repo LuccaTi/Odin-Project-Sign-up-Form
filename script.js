@@ -1,31 +1,43 @@
-let passwordInput = document.getElementById("password-field");
-let confirmPasswordInput = document.getElementById("confirm-password-field");
-let createAccountButton = document.getElementById("create-account-button");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
+const form = document.getElementById("main-form");
 
-confirmPasswordInput.addEventListener("input", checkPassword);
-passwordInput.addEventListener("input", checkPassword);
+function validateAndStylePasswords() {
+    const passValue = passwordInput.value;
+    const confirmPassValue = confirmPasswordInput.value;
 
-function checkPassword() {
-
-    if (passwordInput.value.length > 0 && confirmPasswordInput.value.length > 0) {
-        if (passwordInput.value == confirmPasswordInput.value) {
-
-            passwordInput.style.border = "1px solid green";
-            confirmPasswordInput.style.border = "1px solid green";
-            createAccountButton.disabled = false;
+    if (passValue.length > 0 && confirmPassValue.length > 0) {
+        if (passValue === confirmPassValue) {
+            passwordInput.classList.add("valid-password");
+            confirmPasswordInput.classList.add("valid-password");
+            passwordInput.classList.remove("invalid-password");
+            confirmPasswordInput.classList.remove("invalid-password");
+            confirmPasswordInput.setCustomValidity("");
         } else {
-
-            passwordInput.style.border = "1px solid red";
-            confirmPasswordInput.style.border = "1px solid red";
-            createAccountButton.disabled = true;
+            passwordInput.classList.add("invalid-password");
+            confirmPasswordInput.classList.add("invalid-password");
+            passwordInput.classList.remove("valid-password");
+            confirmPasswordInput.classList.remove("valid-password");
+            confirmPasswordInput.setCustomValidity("Passwords don't match!");
         }
     } else {
-        passwordInput.style.border = "";
-        confirmPasswordInput.style.border = "";
-        createAccountButton.disabled = true;
-    }
+        passwordInput.classList.remove("valid-password", "invalid-password");
+        confirmPasswordInput.classList.remove("valid-password", "invalid-password");
 
-    createAccountButton.addEventListener("click", () => {
-        window.open("https://www.google.com", "_blank");
-    })
+        if (confirmPassValue.length === 0) {
+            confirmPasswordInput.setCustomValidity("");
+        }
+    }
 }
+
+passwordInput.addEventListener("input", validateAndStylePasswords);
+confirmPasswordInput.addEventListener("input", validateAndStylePasswords);
+
+form.addEventListener("submit", (event) => {
+    // Previne o comportamento padrão de enviar o formulário
+    event.preventDefault();
+
+    // Se chegou aqui, o HTML já validou os outros campos
+    console.log("Formulário válido!");
+    window.open("https://www.google.com.br", "_blank");
+});

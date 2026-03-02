@@ -35,44 +35,43 @@
             </div>
             <div class="odin-form-div">
                 <h3>Let's do this!</h3>
-                <form class="odin-form" action="" method="post">
-
+                <form id="main-form" class="odin-form" method="post">
                     <div class="form-row">
                         <div class="form-field">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name">
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="form-field">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name">
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="example@mail.com">
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
                         </div>
                         <div class="form-field">
                             <label for="phone-number">Phone Number</label>
-                            <input type="text" id="phone-number" name="phone-number" placeholder="(xx) 94002-8922">
+                            <input type="text" id="phone-number" name="phone-number" placeholder="(xx) 94002-8922" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label for="password">Password</label>
-                            <input id="password-field" class="password-input" type="password" id="password" name="password">
+                            <input id="password" class="password-input" type="password" name="password" required>
                         </div>
                         <div class="form-field">
                             <label for="confirm-password">confirm-password</label>
-                            <input id="confirm-password-field" class="password-input" type="password" id="confirm-password" name="confirm-password">
+                            <input id="confirm-password" class="password-input" type="password" name="confirm-password" required>
                         </div>
                     </div>
+                    <button id="create-account-button" type="submit">Create Account</button>
                 </form>
             </div>
             <div class="footer">
-                <button id="create-account-button" type="button">Create Account</button>
                 <p>Already have an account? <a href="https://google.com.br" target="_blank">Log in</a></p>
             </div>
         </div>

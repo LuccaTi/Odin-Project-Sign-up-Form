@@ -129,6 +129,25 @@ body {
   gap: 10px;
 }
 
+.odin-form button {
+  margin-right: 25%;
+  margin-left: 25%;
+  background-color: #576c45;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 10px 36px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.odin-form button:hover {
+  cursor: pointer;
+}
+
+.odin-form button:active {
+  background-color: #576c20;
+}
+
 .form-row {
   display: flex;
   gap: 20px;
@@ -147,7 +166,6 @@ label {
   font-weight: 600;
 }
 
-
 input {
   font-size: 0.7rem;
   border-radius: 3px;
@@ -155,14 +173,29 @@ input {
   padding: 4px 8px;
 }
 
-
 input:focus {
   outline: none;
   border: 1px solid blue;
 }
 
-.password-input:invalid {
-  border: 1px solid red;
+.input:invalid {
+  border-color: red;
+}
+
+.valid-password {
+  border-color: green;
+}
+
+.valid-password:focus {
+  border-color: green;
+}
+
+.invalid-password {
+  border-color: red;
+}
+
+.invalid-password:focus{
+  border-color: red;
 }
 
 .footer {
@@ -183,24 +216,6 @@ input:focus {
 
 .footer a:visited {
   color: green;
-}
-
-.footer button {
-  background-color: #576c45;
-  border-radius: 0.5rem;
-  border: 1px solid white;
-  padding: 10px 36px;
-  color: white;
-  margin: 0;
-  font-size: 0.8rem;
-}
-
-.footer button:hover {
-  cursor: pointer;
-}
-
-.footer button:active {
-  background-color: #576c20;
 }
 
 .footer p {
