@@ -54,18 +54,44 @@
                         </div>
                         <div class="form-field">
                             <label for="phone-number">Phone Number</label>
-                            <input type="text" id="phone-number" name="phone-number" placeholder="(xx) 94002-8922" required>
+                            <input type="tel" 
+                            id="phone-number" 
+                            name="phone-number" 
+                            placeholder="(11) 91234-5678" 
+                            required
+                            inputmode="numeric"
+                            autocomplete="tel"
+                            pattern="^\(\d{2}\)\s*\d{5}-\d{4}$"
+                            title="The format must be: (XX) XXXXX-XXXX (space right after the parentheses is optional, don't forget the hyphen)">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label for="password">Password</label>
-                            <input id="password" class="password-input" type="password" name="password" required>
+                            <input id="password" 
+                            class="password-input" 
+                            type="password" 
+                            name="password" 
+                            required
+                            minlength="8"
+                            pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+                            title="Password must be at least 8 characters long and include at least one letter and
+                            one number."
+                            autocomplete="new-password">
                         </div>
                         <div class="form-field">
                             <label for="confirm-password">confirm-password</label>
-                            <input id="confirm-password" class="password-input" type="password" name="confirm-password" required>
+                            <input id="confirm-password" 
+                            class="password-input" 
+                            type="password" 
+                            name="confirm-password" 
+                            required
+                            minlength="8"
+                            pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+                            title="Password must be at least 8 characters long and include at least one letter and
+                            one number."
+                            autocomplete="new-password">
                         </div>
                     </div>
                     <button id="create-account-button" type="submit">Create Account</button>

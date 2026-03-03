@@ -37,7 +37,13 @@ form.addEventListener("submit", (event) => {
     // Previne o comportamento padrão de enviar o formulário
     event.preventDefault();
 
-    // Se chegou aqui, o HTML já validou os outros campos
-    console.log("Formulário válido!");
-    window.open("https://www.google.com.br", "_blank");
+    if (form.checkValidity()) {
+        // Se chegou aqui, o HTML já validou os outros campos
+        console.log("Formulário válido!");
+        window.open("https://www.google.com.br", "_blank");
+    } else {
+        form.reportValidity();
+        console.log("Formulário inválido. Verifique os campos.");
+    }
+
 });

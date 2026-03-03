@@ -9,8 +9,11 @@ O objetivo deste projeto foi construir uma página de inscrição do zero, aplic
 ### ✨ Funcionalidades
 
 *   **Layout Responsivo:** Construído com Flexbox para uma boa visualização em desktops e dispositivos móveis.
-*   **Validação de Senha:** Utiliza JavaScript para verificar se os campos "Password" e "Confirm Password" coincidem em tempo real, habilitando o botão de criação de conta apenas quando as senhas são iguais.
-*   **Estilização Customizada:** Inclui o uso de fontes personalizadas (`@font-face`), pseudo-classes para feedback visual em campos de formulário (`:focus`, `:invalid`) e sobreposição de elementos.
+*   **Validação de Formulário em Tempo Real:**
+    *   Utiliza atributos de validação do HTML5 (`pattern`, `minlength`, `required`) para garantir que dados como telefone e senha estejam no formato correto.
+    *   JavaScript é usado para a validação customizada, verificando se os campos "Password" e "Confirm Password" coincidem.
+*   **Feedback Visual:** As bordas dos campos de senha mudam de cor para indicar se as senhas coincidem ou não, melhorando a experiência do usuário.
+*   **Estilização Customizada:** Inclui o uso de fontes personalizadas (`@font-face`) e pseudo-classes para uma interface mais interativa.
 
 ### 🛠️ Tecnologias Utilizadas
 

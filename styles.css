@@ -178,10 +178,6 @@ input:focus {
   border: 1px solid blue;
 }
 
-.input:invalid {
-  border-color: red;
-}
-
 .valid-password {
   border-color: green;
 }
