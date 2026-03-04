@@ -129,6 +129,18 @@ body {
   gap: 10px;
 }
 
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+  flex: 1;
+} 
+
 .odin-form button {
   margin-right: 25%;
   margin-left: 25%;
@@ -146,18 +158,6 @@ body {
 
 .odin-form button:active {
   background-color: #576c20;
-}
-
-.form-row {
-  display: flex;
-  gap: 20px;
-}
-
-.form-field {
-  display: flex;
-  gap: 2px;
-  flex-direction: column;
-  flex: 1;
 }
 
 label {
