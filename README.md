@@ -1,6 +1,7 @@
 # Projeto: Formulário de Inscrição - The Odin Project
 
-Este é um projeto de formulário de inscrição desenvolvido como parte do currículo do [The Odin Project](https://www.theodinproject.com), na seção de HTML e CSS Intermediário.
+Este é um projeto de formulário de inscrição desenvolvido como parte do currículo do [The Odin Project](https://www.theodinproject.com), na seção de HTML e CSS Intermediário. 
+O curso fez a sugestão do projeto, mas o desenvolvimento foi 100% feito por mim.
 
 ## Sobre o Projeto
 
